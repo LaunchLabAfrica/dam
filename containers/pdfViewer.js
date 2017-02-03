@@ -67,9 +67,7 @@ export default  class PDFViewer extends React.Component {
     this.setState({error});
   }
 
-  componentDidMount() {
-    PDFJS.workerSrc = require('pdfjs-dist/build/pdf.worker.min.js');
-  }
+  
 
   render() {
     const url = this.state.url;
