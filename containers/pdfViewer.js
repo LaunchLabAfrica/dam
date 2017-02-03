@@ -11,6 +11,14 @@ const Container = styled.div`
   justify-content: center;
 `;
 
+
+const Title = styled.div`
+  font-size: 2em;
+  color: #3359df;
+  margin-bottom: 0;
+`;
+
+
 const Loading = styled.div`
   color: 3359df;
 `;
@@ -62,8 +70,12 @@ export default  class PDFViewer extends React.Component {
 
   render() {
     const url = this.state.url;
+    const title = this.props.title;
+    const description = this.props.description;
     return (
       <Container>
+        <Title> {title} </Title>
+        <p> {description } </p>
         <PDF url={url} 
           onProgress={this.onProgress}
           onComplete={this.onComplete}
