@@ -5,6 +5,8 @@ import PDFViewer from '../containers/pdfViewer';
 
 const env = process.env.NODE__ENV || 'development';
 const config = require('../config')[env];
+
+
 export default class extends React.Component {
   static async getInitialProps({ query: { fileName } }) {
     const isServer = typeof window === 'undefined';
