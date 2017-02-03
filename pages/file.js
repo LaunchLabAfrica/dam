@@ -2,6 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 import NoSSR from 'react-no-ssr';
 import PDFViewer from '../containers/pdfViewer';
+import 'pdfjs-dist';
 
 const env = process.env.NODE__ENV || 'development';
 const config = require('../config')[env];
@@ -31,6 +32,10 @@ export default class extends React.Component {
     return {
       asset
     }
+  }
+  
+  componentDidMount() {
+    PDFJS.workerSrc = require('pdfjs-dist/build/pdf.worker.min.js');
   }
 
   render() {

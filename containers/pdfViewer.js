@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import PDF, { Page } from 'react-pdf-pages';
-import 'pdfjs-dist';
 
 const Container = styled.div`
   display: flex;
@@ -66,8 +65,7 @@ export default  class PDFViewer extends React.Component {
   onError(error) {
     this.setState({error});
   }
-
-  
+ 
 
   render() {
     // const url = `https://cors-anywhere.herokuapp.com/https:${this.state.url}`;

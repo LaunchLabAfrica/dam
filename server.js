@@ -17,8 +17,8 @@ app.prepare()
     server.enable('trust proxy');
     server.use((req, res, next) => {
      res.setHeader('Access-Control-Allow-Origin', '*');
-     res.setHeader("Access-Control-Allow-Headers", "Origin, Content-Type, Accept, Range");
-     res.setHeader("Access-Control-Expose-Headers", "Accept-Ranges, Content-Encoding, Content-Length, Content-Range");
+     res.setHeader("Access-Control-Allow-Headers", "Range");
+     res.setHeader("Access-Control-Expose-Headers", "Authorization, Accept-Ranges, Content-Encoding, Content-Length, Content-Range");
     return next();
     });
     server.get('/file/:fileName', (req, res) => {
