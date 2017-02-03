@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
+import 'pdfjs-dist';
 import PDF, { Page } from 'react-pdf-pages';
+PDFJS.workerSrc = require('pdfjs-dist/build/pdf.worker.min.js');
 
 const Container = styled.div`
   display: flex;
