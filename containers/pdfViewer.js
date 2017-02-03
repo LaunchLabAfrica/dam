@@ -67,6 +67,10 @@ export default  class PDFViewer extends React.Component {
     this.setState({error});
   }
 
+  componentDidMount() {
+    PDFJS.workerSrc = require('pdfjs-dist/build/pdf.worker.min.js');
+  }
+
   render() {
     const url = this.state.url;
     const title = this.props.title;
@@ -99,63 +103,3 @@ export default  class PDFViewer extends React.Component {
   }
   
 }
-
-
-/*
-export default class PDFViewer extends React.Component {
-  // static async getInitialProps() {
-  //   const pdfSrc = '/static/Andela_Standard_MSA.pdf';
-  //   return {
-  //     pdfSrc
-  //   }
-  // }
-  //   
-  constructor(props) {
-    super(props);
-    this.onDocumentComplete = this.onDocumentComplete.bind(this);
-    this.onPageComplete = this.onPageComplete.bind(this);
-    this.handlePrevious = this.handlePrevious.bind(this);
-    this.handleNext = this.handleNext.bind(this);
-    this.state = {
-      pdf: null,
-      scale: 1.2
-    }
-  }
-  
-  onDocumentComplete(pages) {
-    this.setState({ page: 1, pages});
-  }
-
-  onPageComplete(page) {
-    this.setState({ page });
-  }
-
-  handlePrevious() {
-    this.setState({ page: this.state.page - 1 });
-  }
-  
-  handleNext() {
-    this.setState({ page: this.state.page + 1 });
-  }
-  
-  componentDidMount() {
-    PDFJS.getDocument('https://mozilla.github.io/pdf.js/web/compressed.tracemonkey-pldi-09.pdf').then((pdf) => {
-      console.log(pdf);
-      this.setState({ pdf });
-    });
-  }
-  
-  render() {
-    return (
-      <div>
-        <NoSSR>
-        { typeof window !== 'undefined'
-         ? <PDF file='https://mozilla.github.io/pdf.js/web/compressed.tracemonkey-pldi-09.pdf' onDocumentComplete={this.onDocumentComplete} onPageComplete={this.onPageComplete} page="1" />
-          : '' 
-        }
-        </NoSSR>
-      </div>
-    );
-  }
-}
-*/

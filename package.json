@@ -23,5 +23,6 @@
     "react-pdf-pages": "^0.1.0",
     "styled-components": "^1.4.2"
   },
-  "devDependencies": {}
+  "devDependencies": {
+  }
 }
