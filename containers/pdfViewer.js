@@ -1,5 +1,4 @@
 import React from 'react';
-// import PDF from 'react-pdf-js';
 import 'pdfjs-dist';
 import PDF, { Page } from 'react-pdf-pages';
 

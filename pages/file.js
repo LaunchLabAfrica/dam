@@ -1,7 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
 import NoSSR from 'react-no-ssr';
-import { Router } from '../routes';
 import PDFViewer from '../containers/pdfViewer';
 
 const env = process.env.NODE__ENV || 'development';
