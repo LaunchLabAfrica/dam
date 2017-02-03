@@ -70,7 +70,8 @@ export default  class PDFViewer extends React.Component {
   
 
   render() {
-    const url = this.state.url;
+    // const url = `https://cors-anywhere.herokuapp.com/https:${this.state.url}`;
+    const url = {this.state.url};
     const title = this.props.title;
     const description = this.props.description;
     return (

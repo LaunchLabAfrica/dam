@@ -14,7 +14,13 @@ const ssrCache = new LRUCache({
 app.prepare()
   .then(() => {
     const server = express()
-
+    server.enable('trust proxy');
+    server.use((req, res, next) => {
+     res.setHeader('Access-Control-Allow-Origin', '*');
+     res.setHeader("Access-Control-Allow-Headers", "Origin, Content-Type, Accept, Range");
+     res.setHeader("Access-Control-Expose-Headers", "Accept-Ranges, Content-Encoding, Content-Length, Content-Range");
+    return next();
+    });
     server.get('/file/:fileName', (req, res) => {
       const queryParams = { fileName: req.params.fileName }
       renderAndCache(req, res, '/file', queryParams) 
