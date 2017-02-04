@@ -1,7 +1,7 @@
 {
   "name": "staticassets",
-  "version": "0.0.1",
-  "description": "Static asset hosting for Andela.com",
+  "version": "0.1.0",
+  "description": "Static asset hosting",
   "main": "server.js",
   "now": {
     "alias": "static.andela.com"
@@ -11,8 +11,8 @@
     "build": "next build",
     "start": "node server.js"
   },
-  "author": "Paul Dariye <paul.dariye@andela.com>",
-  "license": "UNLICENSED",
+  "author": "Paul Dariye <paul.dariye@gmail.com>",
+  "license": "MIT",
   "dependencies": {
     "contentful": "^3.8.0",
     "express": "^4.14.1",
