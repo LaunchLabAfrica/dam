@@ -14,7 +14,6 @@
   "author": "Paul Dariye <paul.dariye@andela.com>",
   "license": "UNLICENSED",
   "dependencies": {
-    "analytics-node": "^2.1.1",
     "contentful": "^3.8.0",
     "express": "^4.14.1",
     "lru-cache": "^4.0.2",
