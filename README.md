@@ -1,15 +1,20 @@
-# StaticAssets
-This simple applications lets you manage static assets. This current version supports
-only pdfs.
+# DAM
+A hosted solution for your digital assets management needs
 
+# Deployment
+Free deployments with [`now`](https://zeit.co/now) with custom domains.
 
-# TODO
-Features/Docs to add
-- [Contentful setup instructions](contentful.com)
-- Image/Audio support
-- Download functionality ( i.e button )
+[Update with one-click deploy]
 
-# Usage
+# Features
+- Web-first
+- Responsive design
+- Lightweight CMS
+- Asset optimization
+- Downloadable as `.jpg`, `.png`, `.svg`, and `.pdf`
+- Shareable link
+
+# Contributing
 
 Install
 
